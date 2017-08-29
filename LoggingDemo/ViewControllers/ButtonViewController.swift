@@ -21,8 +21,10 @@ class ButtonViewController: UIViewController {
         let hud = UIAlertController(title: "Loading...", message: nil, preferredStyle: .alert)
         self.present(hud, animated: false)
         
+        let url = URL(string: "https://jsonplaceholder.typicode.com/users")!
+        os_log("Loading URL: %@", log: Logs.shared.defaultLog, type: .debug, url.absoluteString)
         let session = URLSession(configuration: .default)
-        let task = session.dataTask(with: URL(string: "https://jsonplaceholder.typicode.com/users")!) { data, response, error in
+        let task = session.dataTask(with: url) { data, response, error in
             if let data = data {
                 do {
                     os_log("Loading JSON data", log: Logs.shared.defaultLog, type: .info)
@@ -38,6 +40,17 @@ class ButtonViewController: UIViewController {
                         alert.addAction(UIAlertAction(title: "Ok", style: .default))
                         self.present(alert, animated: false)
                     }
+                }
+            } else {
+                self.dismiss(animated: false) {
+                    let alert = UIAlertController(title: "Error loading users", message: nil, preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "Ok", style: .default))
+                    self.present(alert, animated: false)
+                }
+                if let error = error {
+                    os_log("Error, no data from service: %@", log: Logs.shared.defaultLog, type: .error, error as NSError)
+                } else {
+                    os_log("Error, no data from service", log: Logs.shared.defaultLog, type: .error)
                 }
             }
         }
