@@ -45,6 +45,12 @@ class ButtonViewController: UIViewController {
         
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destinationVC = segue.destination as? UsersViewController {
+            destinationVC.users = users
+        }
+    }
+    
     func parseJson(json: Any) throws -> [User] {
         if let json = json as? [Any] {
             var users = [User]()

@@ -14,6 +14,7 @@
 		885878E31F5517B6007AF90D /* ButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885878E21F5517B6007AF90D /* ButtonViewController.swift */; };
 		885878E51F551A63007AF90D /* Logs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885878E41F551A63007AF90D /* Logs.swift */; };
 		885878E81F551CBA007AF90D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885878E71F551CBA007AF90D /* User.swift */; };
+		885878EB1F552238007AF90D /* UsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885878EA1F552238007AF90D /* UsersViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		885878E21F5517B6007AF90D /* ButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonViewController.swift; sourceTree = "<group>"; };
 		885878E41F551A63007AF90D /* Logs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logs.swift; sourceTree = "<group>"; };
 		885878E71F551CBA007AF90D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		885878EA1F552238007AF90D /* UsersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +60,13 @@
 		885878CF1F5516E3007AF90D /* LoggingDemo */ = {
 			isa = PBXGroup;
 			children = (
+				885878E91F552219007AF90D /* ViewControllers */,
 				885878E61F551CAE007AF90D /* Models */,
 				885878D01F5516E3007AF90D /* AppDelegate.swift */,
 				885878D41F5516E3007AF90D /* Main.storyboard */,
 				885878D71F5516E3007AF90D /* Assets.xcassets */,
 				885878D91F5516E3007AF90D /* LaunchScreen.storyboard */,
 				885878DC1F5516E3007AF90D /* Info.plist */,
-				885878E21F5517B6007AF90D /* ButtonViewController.swift */,
 				885878E41F551A63007AF90D /* Logs.swift */,
 			);
 			path = LoggingDemo;
@@ -76,6 +78,15 @@
 				885878E71F551CBA007AF90D /* User.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		885878E91F552219007AF90D /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				885878E21F5517B6007AF90D /* ButtonViewController.swift */,
+				885878EA1F552238007AF90D /* UsersViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,6 +163,7 @@
 			files = (
 				885878E81F551CBA007AF90D /* User.swift in Sources */,
 				885878E31F5517B6007AF90D /* ButtonViewController.swift in Sources */,
+				885878EB1F552238007AF90D /* UsersViewController.swift in Sources */,
 				885878E51F551A63007AF90D /* Logs.swift in Sources */,
 				885878D11F5516E3007AF90D /* AppDelegate.swift in Sources */,
 			);
