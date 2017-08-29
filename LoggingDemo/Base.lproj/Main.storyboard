@@ -41,7 +41,13 @@
                             <outlet property="delegate" destination="KES-Nc-rUi" id="Ga6-O1-B0g"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="kvb-TZ-JaF"/>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="kvb-TZ-JaF">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="wb5-ss-HQm">
+                            <connections>
+                                <action selector="addButtonTapped:" destination="KES-Nc-rUi" id="gl4-nw-5kc"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L6N-o0-7rn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
