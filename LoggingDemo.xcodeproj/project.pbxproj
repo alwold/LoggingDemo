@@ -8,20 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		885878D11F5516E3007AF90D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885878D01F5516E3007AF90D /* AppDelegate.swift */; };
-		885878D31F5516E3007AF90D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885878D21F5516E3007AF90D /* ViewController.swift */; };
 		885878D61F5516E3007AF90D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 885878D41F5516E3007AF90D /* Main.storyboard */; };
 		885878D81F5516E3007AF90D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 885878D71F5516E3007AF90D /* Assets.xcassets */; };
 		885878DB1F5516E3007AF90D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 885878D91F5516E3007AF90D /* LaunchScreen.storyboard */; };
+		885878E31F5517B6007AF90D /* ButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885878E21F5517B6007AF90D /* ButtonViewController.swift */; };
+		885878E51F551A63007AF90D /* Logs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885878E41F551A63007AF90D /* Logs.swift */; };
+		885878E81F551CBA007AF90D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885878E71F551CBA007AF90D /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		885878CD1F5516E3007AF90D /* LoggingDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoggingDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		885878D01F5516E3007AF90D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		885878D21F5516E3007AF90D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		885878D51F5516E3007AF90D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		885878D71F5516E3007AF90D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		885878DA1F5516E3007AF90D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		885878DC1F5516E3007AF90D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		885878E21F5517B6007AF90D /* ButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonViewController.swift; sourceTree = "<group>"; };
+		885878E41F551A63007AF90D /* Logs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logs.swift; sourceTree = "<group>"; };
+		885878E71F551CBA007AF90D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +58,24 @@
 		885878CF1F5516E3007AF90D /* LoggingDemo */ = {
 			isa = PBXGroup;
 			children = (
+				885878E61F551CAE007AF90D /* Models */,
 				885878D01F5516E3007AF90D /* AppDelegate.swift */,
-				885878D21F5516E3007AF90D /* ViewController.swift */,
 				885878D41F5516E3007AF90D /* Main.storyboard */,
 				885878D71F5516E3007AF90D /* Assets.xcassets */,
 				885878D91F5516E3007AF90D /* LaunchScreen.storyboard */,
 				885878DC1F5516E3007AF90D /* Info.plist */,
+				885878E21F5517B6007AF90D /* ButtonViewController.swift */,
+				885878E41F551A63007AF90D /* Logs.swift */,
 			);
 			path = LoggingDemo;
+			sourceTree = "<group>";
+		};
+		885878E61F551CAE007AF90D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				885878E71F551CBA007AF90D /* User.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,7 +150,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				885878D31F5516E3007AF90D /* ViewController.swift in Sources */,
+				885878E81F551CBA007AF90D /* User.swift in Sources */,
+				885878E31F5517B6007AF90D /* ButtonViewController.swift in Sources */,
+				885878E51F551A63007AF90D /* Logs.swift in Sources */,
 				885878D11F5516E3007AF90D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -211,7 +227,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -262,7 +278,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -275,6 +291,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 24TZPXL52Z;
 				INFOPLIST_FILE = LoggingDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.alwold.LoggingDemo;
@@ -289,6 +306,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 24TZPXL52Z;
 				INFOPLIST_FILE = LoggingDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.alwold.LoggingDemo;
